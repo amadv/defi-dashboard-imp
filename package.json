@@ -7,9 +7,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "sql:gen": "node scripts/gen-data.js",
-    "sql:cmod": "chmod +x init-db.sh",
-    "sql:init": "scripts/init-db.sh"
+    "sql:setup": "node scripts/gen-data.js && chmod +x scripts/init-db.sh && scripts/init-db.sh"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
