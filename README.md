@@ -1,6 +1,6 @@
 # Defi Dashboard (chaos<3)
 
-# DB setup
+# Local setup
 ## Step 1:
 `sudo dnf install sqlite`
 
@@ -16,11 +16,14 @@
 # Start App local
 `npm run dev`
 
+# Docker setup
+`docker-compose up --build`
+
 ## TODO:
 * DONE: clean up tsconfig
 * DONE: clean up lib mov utils.tsx
 * DONE: eslint
-* Self deploy (docker)
+* DONE: Self deploy (docker)
 
 ## Optional:
 * shadcn
