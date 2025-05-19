@@ -15,6 +15,21 @@ else
   cd $APP_DIR
 fi
 
+# Install dependencies including new ones like shadcn-ui, clsx, and tailwind-merge
+echo "Installing dependencies..."
+npm install
+
+# Make sure bash is available for Docker
+echo "Checking if Docker configuration needs bash..."
+if ! grep -q "apk add --no-cache bash" Dockerfile; then
+  echo "Adding bash to Dockerfile..."
+  sed -i '/FROM node:18-alpine/a\# Install bash for shell scripts\nRUN apk add --no-cache bash' Dockerfile
+fi
+
+# Generate database data and prepare scripts
+echo "Setting up database..."
+npm run sql:setup
+
 # Build and restart the Docker containers from the app directory (~/myapp)
 echo "Rebuilding and restarting Docker containers..."
 sudo docker-compose down

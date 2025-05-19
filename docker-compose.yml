@@ -10,7 +10,6 @@ services:
       - defi_db_data:/app/defi.db
     environment:
       NODE_ENV: production
-    command: ./init-db.sh && npm start
 
 volumes:
   defi_db_data:

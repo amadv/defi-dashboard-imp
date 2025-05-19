@@ -1,8 +1,8 @@
 # Defi Dashboard (chaos<3)
 
 # Local setup
-## Step 1:
-`sudo dnf install sqlite`
+## Step 1: Requirements
+`sudo dnf install sqlite` or `brew install sqlite`
 
 ## Step 2: generate data
 `npm run sql:setup`
