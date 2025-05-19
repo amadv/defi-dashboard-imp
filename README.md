@@ -19,12 +19,15 @@
 # Docker setup
 `docker-compose up --build`
 
-## TODO:
+# TODO:
 * DONE: clean up tsconfig
 * DONE: clean up lib mov utils.tsx
 * DONE: eslint
-* DONE: Self deploy (docker)
+* DONE: Self deploy (docker) !important not tested!
 
 ## Optional:
-* shadcn
+* DONE: shadcn
 * login or anon login page
+
+## Considerations:
+* using tanstack-query
